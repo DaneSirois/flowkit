@@ -1,0 +1,40 @@
+@import 'theme.css';
+
+.Header {
+  display: flex;
+    align-items: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-top: 1px solid var(--Black);
+  border-bottom: 1px solid var(--Black);
+}
+
+.Header_leftSlot, .Header_leftInnerSlot {
+  display: flex;
+    align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.Header_leftInnerSlot {
+  margin-right: auto;
+}
+
+.Header_centerSlot {
+  display: flex;
+    align-items: center;
+  position: relative;
+  margin: 0px auto;
+  height: 100%;
+}
+
+.Header_rightSlot, .Header_rightInnerSlot {
+  display: flex;
+    align-items: center;
+  position: relative;
+  height: 100%;
+}
+.Header_rightInnerSlot {
+  margin-left: auto;
+}
