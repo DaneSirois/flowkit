@@ -1,8 +1,5 @@
 // Import dependencies:
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { PropTypes } from 'prop-types';
-import { RI } from 'npm-redux-interfaces';
 
 // Import modules:
 import Logo_module from '@modules/Logo/Logo_index';

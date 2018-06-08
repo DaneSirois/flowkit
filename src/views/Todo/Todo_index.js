@@ -1,11 +1,9 @@
 // Import dependencies:
 import React, { Component } from 'react';
-import { RI } from 'npm-redux-interfaces';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 
 // Import partials:
 import Navbar_partial from '@partials/Navbar/Navbar_index';
+import TodoList_partial from '@partials/TodoList/TodoList_index';
 
 // Import classes:
 import classes from './Todo_style.module.css';
@@ -14,22 +12,19 @@ import classes from './Todo_style.module.css';
 class Todo_view extends Component {
   render() {
     return (
-      <div className={classes.Todo_wrapper}>
+      <div className={classes.TodoPage_wrapper}>
         <Navbar_partial />
-        Hello world
+        <header className={classes.TodoPage_introduction}>
+          <h1 className={classes.TodoPage_introduction_heading}>
+            Getting started:
+          </h1>
+        </header>
+        <div className={classes.TodoPage_todoList}>
+          <TodoList_partial />
+        </div>
       </div>
     );
   };
 };
 
-Todo_view.propTypes = {
-  todoItems: PropTypes.array
-};
-
-function mapStateToProps() {
-  return ({
-    todoItems: RI.todo.items().getState()
-  });
-};
-
-export default connect(mapStateToProps)(Todo_view);
+export default Todo_view;
