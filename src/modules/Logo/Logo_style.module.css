@@ -1,5 +1,6 @@
 @import 'theme.css';
 
 .Logo_image {
+  cursor: pointer;
   height: 40px;
 }

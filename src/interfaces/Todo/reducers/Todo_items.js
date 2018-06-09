@@ -1,7 +1,7 @@
 import typeStash from 'type-stash';
 
 export default (state = [], action) => {
-  switch(action.type) {
+  switch (action.type) {
     case typeStash.use('Todo_SET_LIST'):
       return action.payload;
     case typeStash.use('Todo_ADD_ITEM'):
@@ -11,14 +11,14 @@ export default (state = [], action) => {
     case typeStash.use('Todo_CHECK_ITEM'):
       return state.map((item) => {
         if (item.id === action.payload) {
-          return { ...item, checked: true };
+          return { ...item, completed: true };
         }
         return item;
       });
     case typeStash.use('Todo_UNCHECK_ITEM'):
       return state.map((item) => {
         if (item.id === action.payload) {
-          return { ...item, checked: false };
+          return { ...item, completed: false };
         }
         return item;
       });

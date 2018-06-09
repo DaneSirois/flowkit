@@ -27,8 +27,10 @@ const store = applyMiddleware(...middlewareList)(createStore)(rootReducer);
 // Give RI access to the store:
 RI.setStore(store);
 
-console.log('yoo')
-RI.app.SET_LOADING(false);
+setTimeout(() => {
+  // Simulate an initial delay for any initialization logic;
+  RI.app.SET_LOADING(false);
+}, 1500);
 
 // Mount the root router:
 ReactDOM.render(

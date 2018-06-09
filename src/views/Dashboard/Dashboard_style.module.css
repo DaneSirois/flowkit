@@ -1,20 +1,20 @@
-.TodoPage_wrapper {
+.Dashboard_wrapper {
   position: relative;
   width: 100%;
 }
 
-.TodoPage_introduction {
+.Dashboard_introduction {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 60px 20px 40px;
 }
-  .TodoPage_introduction_heading {
+  .Dashboard_introduction_heading {
     margin: 0px;
   }
 
-.TodoPage_todoList {
+.Dashboard_fetchItems {
   position: relative;
   display: flex;
   align-items: center;

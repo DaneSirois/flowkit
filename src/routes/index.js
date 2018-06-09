@@ -10,6 +10,7 @@ import routeHandlers from './handlers/index.js';
 import Todo_router from './Todo_router';
 
 // Import views:
+import Dashboard_view from '@views/Dashboard/Dashboard_index';
 import Todo_view from '@views/Todo/Todo_index';
 
 // Import root component:
@@ -17,6 +18,7 @@ import App from '../App';
 
 // Add views:
 const views = {
+  Dashboard_view,
   Todo_view
 };
 
@@ -29,7 +31,7 @@ export const routeTo = function (route) {
 export default (
   <Router history={browserHistory}>
     <Route path='/' component={App}>
-      <IndexRoute component={views.Todo_view} />
+      <IndexRoute component={views.Dashboard_view} />
       {Todo_router(views, routeHandlers)}
     </Route>
   </Router>
