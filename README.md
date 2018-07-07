@@ -25,14 +25,14 @@
 
 ## The Architecture
 
-Flowkit's architecture follows a one-directional hierarchy. It is organized into different divisions called "departments". Each department is only able import from the departments below it. Redux takes its place in the form of **Interfaces** (see: [npm-redux-interfaces](https://www.npmjs.com/package/npm-redux-interfaces)). **Interfaces** exist independently from the rest of your application and are accessible from anywhere throughout your app (although part of the convention is that **Components** do not make any store connections). Part of the inspiration for this project was the idea that your architecture should be a reflection of the way that the data flows throughout your React application.
+Flowkit's architecture follows a one-directional hierarchy. It is organized into different divisions called "departments". Each department is only able import from the departments below it. Redux takes its place in the form of **Interfaces** (see: [npm-redux-interfaces](https://www.npmjs.com/package/npm-redux-interfaces)). **Interfaces** exist independently from the rest of your application and are accessible from anywhere throughout your application (Part of the convention is that **Components** do not make any store connections). A main inspiration for this project was the idea that your architecture should be a reflection of the way that the data flows throughout your React application.
 
 <img src="https://i.imgur.com/jDwQaBf.jpg" alt="architecture" width="500px"/>
 
 ### Department structure:
 All departments follow the same structure.
 
-Each department contains a `_index.js` file, a `.module.css` file, and a `__tests__` folder. The idea is that everything that you need when working on a specific domain is right there in one spot.
+Each department contains an `index.js` file, a `.module.css` file, and a `__tests__` folder. The idea is that everything that you need when working on a specific domain is right there in one spot.
 
 An example of a hypothetical "Dashboard" view department could look like:
 ```
@@ -45,7 +45,7 @@ views
 ```
 
 ### Interfaces:
-Interfaces are where the entirety of your Redux logic lives. Each interface is completely self contained hosting both the actions, and reducers for a given domain. The idea behind them is that they provide a public API for your stores in which the rest of your application can interact with. The main benefit to them is that they let you dispatch actions and access state from anywhere throughout your application.
+Interfaces are where the entirety of your Redux logic lives. Each interface is completely self contained and hosts both the actions and reducers for a given domain. The idea behind them is that they provide a public API for your stores in which the rest of your application can interact with. The main benefit to them is that they let you dispatch actions and access state from anywhere throughout your application.
 
 To learn more about redux interfaces, see the documentation for the underlying library: ([npm-redux-interfaces](https://www.npmjs.com/package/npm-redux-interfaces))
 
@@ -120,7 +120,7 @@ modules/Post/Post_index.js
 ### Export naming:
 When naming the export for your departments files, it is convention to append a suffix to the name declaring what type of file it is.
 
-An example of an `_index.js` files export found in a hypothetical "PostList" partial would look like:
+An example of an `index.js` file found in a hypothetical "PostList" partial would look like:
 
 ```js
 // partials/PostList/PostList_index.js
